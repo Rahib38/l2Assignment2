@@ -10,11 +10,13 @@ const createBike = async (req: Request, res: Response) => {
       message: 'Bike is create successfully',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.log(error);
     res.status(500).json({
       success: false,
       message: 'something went wrong',
       error: error,
+      stack: error?.stack,
     });
   }
 };
@@ -27,11 +29,13 @@ const getAllBike = async (req: Request, res: Response) => {
       message: 'bike are retrived successfully',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.log(error);
     res.status(500).json({
       success: false,
       message: 'something went wrong',
       error: error,
+      stack: error?.stack,
     });
   }
 };
@@ -46,11 +50,13 @@ const singleGetBike = async (req: Request, res: Response) => {
       message: 'bike are retrived successfully',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.log(error);
     res.status(500).json({
       success: false,
       message: 'something went wrong',
       error: error,
+      stack: error?.stack,
     });
   }
 };
@@ -65,11 +71,13 @@ const updateBike = async (req: Request, res: Response) => {
       message: 'bike are retrived successfully',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.log(error);
     res.status(500).json({
       success: false,
       message: 'something went wrong',
       error: error,
+      stack: error?.stack,
     });
   }
 };
@@ -82,11 +90,13 @@ const deleteBike = async (req: Request, res: Response) => {
       message: 'bike are retrived successfully',
       result: {},
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.log(error);
     res.status(500).json({
       success: false,
       message: 'something went wrong',
       error: error,
+      stack: error?.stack,
     });
   }
 };

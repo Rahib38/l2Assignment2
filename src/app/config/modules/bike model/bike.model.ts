@@ -17,6 +17,14 @@ const bikeSchema = new Schema<Bike>(
     quantity: { type: Number, required: true },
     inStock: { type: Boolean, required: true },
   },
-  { timestamps: true },
+  {
+    timestamps: true,
+    toJSON: {
+      transform: function (doc, ret) {
+        delete ret.__v;
+      },
+    },
+  },
 );
+
 export const BikeModel = model<Bike>('Bike', bikeSchema);
