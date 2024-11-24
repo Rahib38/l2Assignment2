@@ -7,14 +7,14 @@ const bikeSchema = new Schema<Bike>(
       type: String,
       required: [true, 'Bike name is required'], // Custom error message
       minlength: [6, 'Bike name must be at least 6 characters long'],
-      maxlength: [40, 'Bike name cannot exceed 20 characters'],
+      maxlength: [40, 'Bike name cannot exceed 40 characters'],
       trim: true, // Removes extra whitespace
     },
     brand: {
       type: String,
       required: [true, 'Brand is required'],
       minlength: [6, 'Brand name must be at least 6 characters long'],
-      maxlength: [40, 'Brand name cannot exceed 20 characters'],
+      maxlength: [40, 'Brand name cannot exceed 40 characters'],
       trim: true,
     },
     price: {

@@ -34,8 +34,12 @@ const orderSchema = new Schema<Order>(
   },
   {
     timestamps: true, // Automatically adds createdAt and updatedAt fields
+    toJSON: {
+      transform: function (doc, ret) {
+        delete ret.__v; // Remove __v field from output
+      },
+    },
   },
 );
 
 export const orderModel = model<Order>('Order', orderSchema);
- 
