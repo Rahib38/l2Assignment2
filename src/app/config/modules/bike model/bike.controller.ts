@@ -3,8 +3,8 @@ import { BikeService } from './bike.service';
 
 const createBike = async (req: Request, res: Response) => {
   try {
-    const { bike: bikeData } = req.body;
-    const result = await BikeService.createBikeIntoDB(bikeData);
+    const bike = req.body;
+    const result = await BikeService.createBikeIntoDB(bike);
     res.status(200).json({
       success: true,
       message: 'Bike is create successfully',
