@@ -6,8 +6,23 @@ const createBikeIntoDB = async (bike: Bike) => {
   return result;
 };
 
-const getBikeIntoDB = async () => {
-  const result = await BikeModel.find();
+const getBikeIntoDB = async (searchTerm:string) => {
+  let filter = {}
+  const regex = new RegExp(searchTerm as string ,"i")
+  filter = {
+    $or:[
+      {
+      name:regex
+    },
+      {
+      brand:regex
+    },
+      {
+      category:regex
+    }
+  ]
+  }
+  const result = await BikeModel.find(filter);
   return result;
 };
 
