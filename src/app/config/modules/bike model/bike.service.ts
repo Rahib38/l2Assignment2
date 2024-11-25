@@ -6,22 +6,22 @@ const createBikeIntoDB = async (bike: Bike) => {
   return result;
 };
 
-const getBikeIntoDB = async (searchTerm:string) => {
-  let filter = {}
-  const regex = new RegExp(searchTerm as string ,"i")
+const getBikeIntoDB = async (searchTerm: string) => {
+  let filter = {};
+  const regex = new RegExp(searchTerm as string, 'i');
   filter = {
-    $or:[
+    $or: [
       {
-      name:regex
-    },
+        name: regex,
+      },
       {
-      brand:regex
-    },
+        brand: regex,
+      },
       {
-      category:regex
-    }
-  ]
-  }
+        category: regex,
+      },
+    ],
+  };
   const result = await BikeModel.find(filter);
   return result;
 };
