@@ -43,7 +43,7 @@ Bike Store Live Application
 1. Clone the repository:
 
 ```tsx
-git clone https://github.com/your-username/bike-store.git
+git clone https://github.com/Rahib38/l2Assignment2.git
 cd l2Assignment2
 ```
 
