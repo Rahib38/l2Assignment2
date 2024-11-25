@@ -113,7 +113,7 @@ Response:
    Endpoint: DELETE /api/products/:bikeId
 
 6. Place an Order
-   Endpoint: POST /api/orders
+   Endpoint: POST /api/orders/create-order
 
 7. Get Total Revenue
    Endpoint: GET /api/orders
