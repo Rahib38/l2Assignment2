@@ -4,7 +4,7 @@ A full-stack application built with TypeScript, Express.js, and MongoDB to manag
 ## 🚀 Live Demo
 Bike Store Live Application
 
-([Replace with your live URL once deployed](https://l2-assignment2-lovat.vercel.app/))
+([live URL ](https://l2-assignment2-lovat.vercel.app/))
 
 
 ## ✨ Features
