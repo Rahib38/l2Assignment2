@@ -44,8 +44,8 @@ const getAllBike = async (req: Request, res: Response) => {
 const singleGetBike = async (req: Request, res: Response) => {
   try {
     console.log(req.params);
-    const bikeId = req.params.bikeId;
-    const result = await BikeService.singleBikeIntoDB(bikeId);
+    const productId = req.params.productId;
+    const result = await BikeService.singleBikeIntoDB(productId);
     res.status(200).json({
       success: true,
       message: 'bike are retrived successfully',
@@ -63,10 +63,10 @@ const singleGetBike = async (req: Request, res: Response) => {
 };
 const updateBike = async (req: Request, res: Response) => {
   try {
-    const bikeId = req.params.bikeId;
+    const productId = req.params.productId;
     console.log(req.params);
     const body = req.body;
-    const result = await BikeService.updateBikeIntoDB(bikeId, body);
+    const result = await BikeService.updateBikeIntoDB(productId, body);
     res.status(200).json({
       success: true,
       message: 'bike are retrived successfully',
@@ -84,8 +84,8 @@ const updateBike = async (req: Request, res: Response) => {
 };
 const deleteBike = async (req: Request, res: Response) => {
   try {
-    const bikeId = req.params.bikeId;
-    const result = await BikeService.deleteBikeIntoDB(bikeId);
+    const productId = req.params.productId;
+    const result = await BikeService.deleteBikeIntoDB(productId);
     res.status(200).json({
       success: true,
       message: 'bike are retrived successfully',
