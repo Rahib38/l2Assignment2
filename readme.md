@@ -75,7 +75,7 @@ npm run start:dev
 📖 API Documentation
 
 1. Create a Bike
-   Endpoint: POST /api/create-bike
+   Endpoint: POST /api/products
    Request Body:
 
 ```tsx
@@ -103,20 +103,20 @@ Response:
 2. Get All Bikes
    Endpoint: GET /api/products
 
-3. Get a Bike by ID
-   Endpoint: GET /api/products/:bikeId
+3. Get a Single Bike by ID
+   Endpoint: GET /api/products/:productId
 
 4. Update a Bike
-   Endpoint: PUT /api/products/:bikeId
+   Endpoint: PUT /api/products/:productId
 
 5. Delete a Bike
-   Endpoint: DELETE /api/products/:bikeId
+   Endpoint: DELETE /api/products/:productId
 
 6. Place an Order
-   Endpoint: POST /api/orders/create-order
+   Endpoint: POST /api/orders
 
 7. Get Total Revenue
-   Endpoint: GET /api/orders
+   Endpoint: GET /api/orders/revenue
 
 (For detailed API documentation, refer to the /docs directory or API testing collection shared.)
 
