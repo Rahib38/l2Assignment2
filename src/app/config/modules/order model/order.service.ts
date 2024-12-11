@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BikeModel } from '../bike model/bike.model';
 import { Order } from './order.interface';
 import { orderModel } from './order.model';

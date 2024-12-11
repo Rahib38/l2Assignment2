@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Request, Response } from 'express';
 import { BikeService } from './bike.service';
 
@@ -23,7 +24,7 @@ const createBike = async (req: Request, res: Response) => {
 
 const getAllBike = async (req: Request, res: Response) => {
   try {
-    const {searchTerm}=req.query
+    const { searchTerm } = req.query;
     const result = await BikeService.getBikeIntoDB(searchTerm as string);
     res.status(200).json({
       success: true,
@@ -85,7 +86,7 @@ const updateBike = async (req: Request, res: Response) => {
 const deleteBike = async (req: Request, res: Response) => {
   try {
     const productId = req.params.productId;
-    const result = await BikeService.deleteBikeIntoDB(productId);
+    await BikeService.deleteBikeIntoDB(productId);
     res.status(200).json({
       success: true,
       message: 'bike are retrived successfully',
